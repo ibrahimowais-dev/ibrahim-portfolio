@@ -1,4 +1,13 @@
 /* =========================================================
+   EMAILJS INITIALIZATION
+========================================================= */
+(function () {
+    emailjs.init({
+        publicKey: "pzaRfwqI8Hx3EXsfm",
+    });
+})();
+
+/* =========================================================
    NAVIGATION
 ========================================================= */
 
@@ -143,53 +152,55 @@ scrollTopBtn.addEventListener(
 
 
 /* =========================================================
-   CONTACT FORM
+   CONTACT FORM HANDLER (EmailJS Integration)
 ========================================================= */
-
 const contactForm = document.getElementById("contactForm");
 
+if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-contactForm.addEventListener(
-    "submit",
-    (event) => {
-
-        event.preventDefault();
-
-        /*
-            The form is currently front-end only.
-            Later you can connect it to:
-            Formspree / EmailJS / Backend API / PHP / Node.js
-        */
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn ? submitBtn.innerText : "Send Message";
 
         const formData = new FormData(contactForm);
+        
+        const templateParams = {
+            from_name: formData.get("from_name"),
+            from_email: formData.get("from_email"),
+            subject: formData.get("subject"),
+            message: formData.get("message")
+        };
 
-        const name = formData.get("name");
-        const email = formData.get("email");
-        const subject = formData.get("subject");
-        const message = formData.get("message");
-
-
-        if (
-            !name ||
-            !email ||
-            !subject ||
-            !message
-        ) {
+        if (!templateParams.from_name || !templateParams.from_email || !templateParams.subject || !templateParams.message) {
+            alert("Please fill in all required fields.");
             return;
         }
 
+        if (submitBtn) {
+            submitBtn.innerText = "Sending...";
+            submitBtn.disabled = true;
+        }
 
-        console.log({
-            name,
-            email,
-            subject,
-            message
-        });
+        const serviceID = "service_opwy5v1";
 
+        const templateID = "template_go6ehmw";
 
-        alert("Your message has been submitted successfully!");
-
-        contactForm.reset();
-
-    }
-);
+        emailjs.send(serviceID, templateID, templateParams)
+            .then((response) => {
+                console.log("SUCCESS!", response.status, response.text);
+                alert("Your message has been submitted successfully!");
+                contactForm.reset();
+            })
+            .catch((error) => {
+                console.error("EmailJS Error Details:", error);
+                alert("Failed to send message: " + (error.text || error.status || "Check Console"));
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            });
+    });
+}
