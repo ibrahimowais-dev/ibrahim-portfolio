@@ -1,0 +1,1243 @@
+/* =========================================================
+   RESPONSIVE SYSTEM
+   ========================================================= */
+
+/* =========================================================
+   GLOBAL RESPONSIVE SAFETY
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1200px+
+========================================================= */
+
+@media screen and (min-width: 1200px) {
+
+    .main-layout {
+        grid-template-columns:
+            minmax(280px, 0.8fr) minmax(0, 2fr);
+    }
+
+    .content-area {
+        padding: 32px;
+    }
+
+    .projects-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .project-image {
+        height: 170px;
+    }
+
+    .profile-buttons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .profile-buttons .btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+   992px - 1199px
+========================================================= */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    /* ---------- Main Layout ---------- */
+
+    .main-layout {
+        grid-template-columns:
+            minmax(250px, 0.75fr) minmax(0, 1.8fr);
+    }
+
+
+    /* ---------- Header ---------- */
+
+    .site-header {
+        padding: 8px 20px;
+    }
+
+    .navbar {
+        width: min(720px, 90%);
+    }
+
+    .nav-link {
+        padding: 8px 13px;
+        font-size: 0.8rem;
+    }
+
+
+    /* ---------- Sidebar ---------- */
+
+    .profile-sidebar {
+        padding: 25px 18px;
+    }
+
+    .profile-content {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.4rem;
+    }
+
+    .profile-job {
+        font-size: 0.8rem;
+    }
+
+    .profile-description {
+        max-width: 250px;
+        font-size: 0.78rem;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- Profile Buttons ---------- */
+
+    .profile-buttons {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .profile-buttons .btn {
+        width: 100%;
+        min-height: 42px;
+        padding: 9px 12px;
+        font-size: 0.75rem;
+    }
+
+
+    /* ---------- Content ---------- */
+
+    .content-area {
+        padding: 25px;
+    }
+
+
+    /* ---------- About ---------- */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    /* ---------- Projects ---------- */
+
+    .projects-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .project-image {
+        height: 165px;
+    }
+
+    .project-content {
+        padding: 15px;
+    }
+
+    .project-actions {
+        padding: 0 15px 15px;
+    }
+
+    .project-actions a {
+        width: 100%;
+        min-height: 40px;
+    }
+
+
+    /* ---------- Skills ---------- */
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+
+    /* ---------- Contact ---------- */
+
+    .contact-card {
+        padding: 24px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 991px
+========================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* ---------- Header ---------- */
+
+    .site-header {
+        height: 68px;
+        padding: 8px 15px;
+    }
+
+    .navbar {
+        width: min(650px, 92%);
+        height: 50px;
+    }
+
+    .nav-link {
+        padding: 7px 11px;
+        font-size: 0.74rem;
+    }
+
+
+    /* ---------- Main Layout ---------- */
+
+    .main-layout {
+        grid-template-columns:
+            minmax(215px, 0.65fr) minmax(0, 1.7fr);
+    }
+
+
+    /* ---------- Sidebar ---------- */
+
+    .profile-sidebar {
+        top: 68px;
+        height: calc(100vh - 68px);
+        padding: 22px 12px;
+    }
+
+    .profile-content {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info {
+        margin-top: 15px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.15rem;
+    }
+
+    .profile-job {
+        font-size: 0.74rem;
+    }
+
+    .profile-description {
+        max-width: 205px;
+        font-size: 0.68rem;
+        line-height: 1.55;
+    }
+
+
+    /* ---------- Profile Buttons ---------- */
+
+    .profile-buttons {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin-top: 16px;
+    }
+
+    .profile-buttons .btn {
+        width: 100%;
+        min-height: 39px;
+        padding: 7px 8px;
+        font-size: 0.67rem;
+    }
+
+
+    /* ---------- Social ---------- */
+
+    .social-links {
+        gap: 9px;
+        margin-top: 17px;
+    }
+
+    .social-links a {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+
+
+    /* ---------- Content ---------- */
+
+    .content-area {
+        padding: 22px 18px;
+    }
+
+    .content-section {
+        scroll-margin-top: 80px;
+    }
+
+
+    /* ---------- Section Titles ---------- */
+
+    .section-title {
+        margin-bottom: 18px;
+    }
+
+
+    /* ---------- About ---------- */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .content-card {
+        padding: 17px;
+    }
+
+
+    /* ---------- Workflow ---------- */
+
+    .workflow-item {
+        width: 90%;
+    }
+
+
+    /* ---------- Skills ---------- */
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+
+    /* ---------- Projects ---------- */
+
+    .projects-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+    .project-image {
+        height: 145px;
+    }
+
+    .project-content {
+        padding: 13px;
+    }
+
+    .project-actions {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        padding: 0 13px 13px;
+    }
+
+    .project-actions a {
+        width: 100%;
+        min-height: 38px;
+    }
+
+
+    /* ---------- Services ---------- */
+
+    .accordion-button {
+        min-height: 55px;
+        padding: 11px 13px;
+        font-size: 0.76rem;
+    }
+
+    .accordion-body {
+        font-size: 0.74rem;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- Contact ---------- */
+
+    .contact-card {
+        padding: 20px;
+    }
+
+
+    /* ---------- Scroll Button ---------- */
+
+    #scrollTopBtn {
+        right: 18px;
+        bottom: 18px;
+
+        width: 42px;
+        height: 42px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   577px - 767px
+========================================================= */
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+
+    /* ---------- Header ---------- */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        height: 64px;
+        padding: 7px 12px;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 50px;
+        padding: 4px 6px;
+    }
+
+    .navbar-list {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-link {
+        padding: 7px 11px;
+        font-size: 0.72rem;
+        white-space: nowrap;
+    }
+
+
+    /* ---------- Main ---------- */
+
+    .main-layout {
+        display: block;
+        min-height: auto;
+    }
+
+
+    /* ---------- Sidebar ---------- */
+
+    .profile-sidebar {
+        position: relative;
+        top: auto;
+
+        width: 100%;
+        height: auto;
+
+        padding: 32px 20px;
+
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .profile-content {
+        width: min(100%, 520px);
+        margin-inline: auto;
+        padding: 0;
+    }
+
+    .profile-image {
+        width: 145px;
+        height: 145px;
+    }
+
+    .profile-info {
+        margin-top: 18px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.45rem;
+    }
+
+    .profile-job {
+        font-size: 0.86rem;
+    }
+
+    .profile-description {
+        max-width: 430px;
+        font-size: 0.82rem;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- Profile Buttons ---------- */
+
+    .profile-buttons {
+        width: min(100%, 400px);
+
+        margin-inline: auto;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .profile-buttons .btn {
+        width: 100%;
+        min-height: 44px;
+
+        padding: 9px 12px;
+
+        font-size: 0.78rem;
+    }
+
+
+    /* ---------- Social ---------- */
+
+    .social-links {
+        gap: 12px;
+        margin-top: 22px;
+    }
+
+
+    /* ---------- Content ---------- */
+
+    .content-area {
+        width: 100%;
+        padding: 30px 20px;
+
+        overflow: visible;
+    }
+
+    .content-section {
+        scroll-margin-top: 75px;
+        margin-bottom: 45px;
+    }
+
+
+    /* ---------- About ---------- */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .content-card {
+        padding: 18px;
+    }
+
+
+    /* ---------- Workflow ---------- */
+
+    .workflow-item {
+        width: 90%;
+    }
+
+
+    /* ---------- Skills ---------- */
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+
+    /* ---------- Projects ---------- */
+
+    .projects-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 15px;
+    }
+
+    .project-image {
+        height: 170px;
+    }
+
+    .project-content {
+        padding: 14px;
+    }
+
+    .project-actions {
+        grid-template-columns: 1fr;
+        gap: 8px;
+
+        padding: 0 14px 14px;
+    }
+
+    .project-actions a {
+        width: 100%;
+        min-height: 40px;
+    }
+
+
+    /* ---------- Services ---------- */
+
+    .accordion-button {
+        min-height: 56px;
+
+        padding: 11px 14px;
+
+        font-size: 0.78rem;
+    }
+
+    .accordion-body {
+        font-size: 0.76rem;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- Contact ---------- */
+
+    .contact-card {
+        padding: 20px;
+    }
+
+
+    /* ---------- Scroll Top ---------- */
+
+    #scrollTopBtn {
+        right: 18px;
+        bottom: 18px;
+
+        width: 43px;
+        height: 43px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 576px
+========================================================= */
+
+@media screen and (max-width: 576px) {
+
+    /* ---------- Header ---------- */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        height: 62px;
+        padding: 7px 8px;
+    }
+
+    .navbar {
+        width: 100%;
+        height: 48px;
+
+        padding: 3px 4px;
+
+        border-radius: 14px;
+    }
+
+    .navbar-list {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 2px;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 38px;
+
+        padding: 6px 8px;
+
+        font-size: 0.67rem;
+
+        white-space: nowrap;
+    }
+
+
+    /* ---------- Main ---------- */
+
+    .main-layout {
+        display: block;
+        min-height: auto;
+    }
+
+
+    /* ---------- Sidebar ---------- */
+
+    .profile-sidebar {
+        position: relative;
+        top: auto;
+
+        width: 100%;
+        height: auto;
+
+        padding: 28px 15px;
+
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .profile-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile-image {
+        width: 135px;
+        height: 135px;
+    }
+
+    .profile-info {
+        margin-top: 17px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.3rem;
+    }
+
+    .profile-job {
+        margin-bottom: 8px;
+        font-size: 0.8rem;
+    }
+
+    .profile-description {
+        width: min(100%, 350px);
+        margin-inline: auto;
+
+        font-size: 0.76rem;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- Profile Buttons ---------- */
+
+    .profile-buttons {
+        width: min(100%, 330px);
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+
+        margin: 20px auto 0;
+    }
+
+    .profile-buttons .btn {
+        width: 100%;
+        min-height: 43px;
+
+        padding: 9px 12px;
+
+        font-size: 0.76rem;
+    }
+
+
+    /* ---------- Social ---------- */
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 48px;
+
+        margin-top: 21px;
+    }
+
+    .social-links a {
+        flex: 0 0 auto;
+
+        width: 37px;
+        height: 37px;
+
+        font-size: 0.95rem;
+    }
+
+
+    /* ---------- Content ---------- */
+
+    .content-area {
+        width: 100%;
+
+        padding: 26px 13px;
+
+        overflow: visible;
+    }
+
+    .content-section {
+        width: 100%;
+
+        scroll-margin-top: 72px;
+
+        margin-bottom: 40px;
+    }
+
+
+    /* ---------- Section Title ---------- */
+
+    .section-title {
+        margin-bottom: 18px;
+        font-size: 1.25rem;
+    }
+
+    .section-title::before {
+        width: 4px;
+        height: 22px;
+    }
+
+
+    /* ---------- About Cards ---------- */
+
+    .about-grid {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .content-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card-heading {
+        margin-bottom: 15px;
+    }
+
+    .card-heading h3 {
+        font-size: 0.98rem;
+    }
+
+
+    /* ---------- Workflow ---------- */
+
+    .workflow-item {
+        width: 95%;
+        max-width: 100%;
+
+        padding: 8px 10px;
+    }
+
+    .workflow-item p {
+        font-size: 0.68rem;
+    }
+
+    .workflow-number {
+        width: 26px;
+        height: 26px;
+
+        font-size: 0.6rem;
+    }
+
+
+    /* ---------- Skills ---------- */
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .skill {
+        width: 100%;
+
+        min-height: 47px;
+
+        padding: 8px;
+
+        font-size: 0.7rem;
+    }
+
+    .skill i {
+        font-size: 0.95rem;
+    }
+
+
+    /* ---------- Projects ---------- */
+
+    .projects-grid {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .project-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 15px;
+    }
+
+    .project-content>p {
+        min-height: auto;
+    }
+
+    .project-actions {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+        padding: 0 15px 15px;
+    }
+
+    .project-actions a {
+        width: 100%;
+        min-width: 0;
+
+        min-height: 40px;
+
+        padding: 8px 10px;
+
+        font-size: 0.72rem;
+    }
+
+
+    /* ---------- Services ---------- */
+
+    .services-container {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .accordion-button {
+        min-height: 55px;
+
+        padding: 10px 12px;
+
+        font-size: 0.73rem;
+    }
+
+    .service-icon {
+        width: 22px;
+        margin-right: 5px;
+
+        font-size: 1rem;
+    }
+
+    .accordion-body {
+        padding: 13px;
+
+        font-size: 0.73rem;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- Contact ---------- */
+
+    .contact-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-header h3 {
+        font-size: 1rem;
+    }
+
+    .contact-header p {
+        font-size: 0.73rem;
+        line-height: 1.6;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+
+        padding: 10px 11px;
+
+        font-size: 0.75rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+
+        min-height: 43px;
+
+        font-size: 0.76rem;
+    }
+
+
+    /* ---------- Scroll Top ---------- */
+
+    #scrollTopBtn {
+        right: 14px;
+        bottom: 14px;
+
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 400px
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+    /* ---------- Navbar ---------- */
+
+    .site-header {
+        padding-inline: 5px;
+    }
+
+    .navbar {
+        padding: 3px;
+    }
+
+    .nav-link {
+        min-height: 36px;
+
+        padding: 6px 5px;
+
+        font-size: 0.61rem;
+    }
+
+
+    /* ---------- Profile ---------- */
+
+    .profile-sidebar {
+        padding: 25px 10px;
+    }
+
+    .profile-image {
+        width: 125px;
+        height: 125px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.2rem;
+    }
+
+    .profile-job {
+        font-size: 0.76rem;
+    }
+
+    .profile-description {
+        font-size: 0.72rem;
+    }
+
+
+    /* ---------- Buttons ---------- */
+
+    .profile-buttons {
+        width: min(100%, 300px);
+    }
+
+    .profile-buttons .btn {
+        min-height: 42px;
+        font-size: 0.73rem;
+    }
+
+
+    /* ---------- Content ---------- */
+
+    .content-area {
+        padding-inline: 10px;
+    }
+
+
+    /* ---------- Section Title ---------- */
+
+    .section-title {
+        font-size: 1.15rem;
+    }
+
+
+    /* ---------- Skills ---------- */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+
+    /* ---------- Workflow ---------- */
+
+    .workflow-item {
+        width: 100%;
+    }
+
+
+    /* ---------- Projects ---------- */
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .project-actions a {
+        min-height: 40px;
+    }
+
+
+    /* ---------- Services ---------- */
+
+    .accordion-button {
+        font-size: 0.7rem;
+    }
+
+    .accordion-body {
+        font-size: 0.7rem;
+    }
+
+
+    /* ---------- Scroll Button ---------- */
+
+    #scrollTopBtn {
+        right: 11px;
+        bottom: 11px;
+
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+/* =========================================================
+   EXTREMELY SMALL DEVICES
+   <= 340px
+========================================================= */
+
+@media screen and (max-width: 340px) {
+
+    /* ---------- Navbar ---------- */
+
+    .nav-link {
+        padding: 6px 3px;
+        font-size: 0.56rem;
+    }
+
+
+    /* ---------- Profile ---------- */
+
+    .profile-image {
+        width: 115px;
+        height: 115px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.12rem;
+    }
+
+
+    /* ---------- Content ---------- */
+
+    .content-area {
+        padding-inline: 8px;
+    }
+
+
+    /* ---------- Project Buttons ---------- */
+
+    .project-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- Social ---------- */
+
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+    .site-header {
+        position: relative;
+    }
+
+    .profile-sidebar {
+        position: relative;
+        top: auto;
+    }
+
+    .profile-content {
+        padding-block: 8px;
+    }
+
+    .profile-image {
+        width: 95px;
+        height: 95px;
+    }
+
+    .profile-info {
+        margin-top: 8px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.15rem;
+    }
+
+    .profile-buttons {
+        margin-top: 10px;
+    }
+
+    .profile-buttons .btn {
+        min-height: 38px;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+}
